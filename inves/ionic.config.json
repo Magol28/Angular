@@ -1,0 +1,7 @@
+{
+  "name": "inves",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

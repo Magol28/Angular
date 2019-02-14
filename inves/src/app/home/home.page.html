@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>CRUD</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label color="primary" stacked>Codigo</ion-label>
+        <ion-input type="text" [(ngModel)]="id" placeholder="Codigo"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="name" placeholder="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="surname" placeholder="Apellido"></ion-input>
+    </ion-item>
+
+    <button (click)=insertar() ion-button color="#4AC925">Insertar</button>
+
+    <button (click)=Buscar() ion-button color="#4AC925">Buscar</button>
+
+    <button (click)=Eliminar() ion-button color="#4AC925">Eliminar</button>
+
+    <button (click)=Editar() ion-button color="#4AC925">Editar</button>
+    <!--   <button (click)=insertar()>hola</button>-->
+</ion-content>
