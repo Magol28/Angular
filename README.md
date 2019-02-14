@@ -16,4 +16,4 @@ to check that you have nodejs run node -v in a terminal/console window.
 ### [npm-install](https://docs.npmjs.com/cli/install) 
 to check that you have npm manager run npm -v in a terminal/console window.
 ### [Angular](https://angular.io/guide/quickstart) 
-
+This is a way to install angular in your PC.
