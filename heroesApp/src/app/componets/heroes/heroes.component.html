@@ -1,0 +1,39 @@
+<h1>Heroes</h1>
+<hr>
+<div class="row animated fadeIn-fast">
+    <div class="col-md-12 text-right">
+        <button [routerLink]="['/heroe','1']" routerLinkActive="router-link-active" type="button" class="btn btn-primary" name="button"> Agregar Nuevo</button>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Casa</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let k of heroes | keys,let i= index">
+                        <th scope="row">{{i}}</th>
+                        <td>{{heroes[k].nombre}}</td>
+                        <td>{{heroes[k].casa}}</td>
+                        <td>
+                            <button [routerLink]="['/heroe',k]" type="button" class="btn btn-outline-success">Editar</button>
+                            <button (click)="borrar(k)" type="button" class="btn btn-outline-danger">Eliminar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="alert alert-info" *ngIf="(heroes|keys).length===0">
+                <strong>No existen mas resgistros</strong>
+            </div>
+        </div>
+    </div>
+</div>
