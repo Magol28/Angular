@@ -1,0 +1,23 @@
+<div *ngIf="moviedetails">
+    <div class="text-center">
+        <h2>{{moviedetails['title']}}</h2>
+    </div>
+    <hr>
+    <div class="row">
+
+        <div class="col">
+            <img [src]="'http://image.tmdb.org/t/p/w300'+moviedetails.poster_path" alt="">
+        </div>
+        <div class="col">
+            <h4><strong>Descripción</strong></h4>
+            <p>{{moviedetails.overview}}</p>
+        </div>
+
+    </div>
+    <hr>
+
+
+    <div>
+        <button (click)="regresar()" type="button" class="btn btn-danger"> Regresar </button>
+    </div>
+</div>

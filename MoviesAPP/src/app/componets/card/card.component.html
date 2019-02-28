@@ -1,0 +1,9 @@
+<div class="card-columns">
+
+
+    <div class="card text-center" *ngFor="let movie of movies">
+        <img [src]="'http://image.tmdb.org/t/p/w300'+movie.poster_path" class="card-img-top" (click)="movieDescription(movie.id)">
+        <div class="bottom-left">{{movie.original_title}}</div>
+    </div>
+
+</div>

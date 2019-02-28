@@ -1,0 +1,12 @@
+<form #forma="ngForm">
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Pelicula</span>
+        </div>
+        <input (keydown.enter)="Buscar(forma.value.movie)" class="form-control" type="text" placeholder="Buscar" #correo="ngModel" [(ngModel)]="movie" name="movie">
+
+    </div>
+</form>
+<div>
+    <app-card [movies]=movies [pag]="'search'"></app-card>
+</div>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main-container {
+    margin-top: 40px;
+}
+
+hr {
+    border-top: 2px solid cadetblue;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.bottom-left {
+    position: absolute;
+    color: aliceblue;
+    bottom: 8px;
+    left: 16px;
+}
