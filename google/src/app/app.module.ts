@@ -8,18 +8,29 @@ import { AgmCoreModule } from '@agm/core';
 import { MaterialModule } from './material.module';
 import { MapaComponent } from './componets/mapa/mapa.component';
 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MapaeditarComponent } from './componets/mapa/mapaeditar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
+  entryComponents: [
+    MapaeditarComponent
+  ],
   declarations: [
     AppComponent,
-    MapaComponent
+    MapaComponent,
+    MapaeditarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDXwVQSXMlQ226CGNKUp6qdxdECQEsjBY8'
+      apiKey: '
+      '
     })
   ],
   providers: [],

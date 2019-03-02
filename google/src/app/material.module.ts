@@ -6,21 +6,26 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatCardModule} from '@angular/material/card'
-
+import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   imports: [
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatInputModule
   ]
   ,
   declarations: []
