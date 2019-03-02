@@ -1,0 +1,132 @@
+<div class="container">
+    <br>
+    <h1>Pipes</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Variable</th>
+                <th scope="col">{{title}}</th>
+                <th scope="col">Producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{nombre}}</td>
+                <td>uppercase</td>
+                <td>{{nombre|uppercase}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{nombre}}</td>
+                <td>uppercase</td>
+                <td>{{nombre|lowercase}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{nombre}}</td>
+                <td>slice:3</td>
+                <td>{{nombre|slice:3}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{nombre}}</td>
+                <td>slice:0:3</td>
+                <td>{{nombre|slice:0:3}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{arreglo}}</td>
+                <td>slice:0:3</td>
+                <td>{{arreglo|slice:1:5}}</td>
+            </tr>
+
+            <h4>Slice</h4>
+            <ul>
+                <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
+            </ul>
+
+            <tr>
+                <th scope="row">2</th>
+                <td>{{PI}}</td>
+                <td>number:3.3-5</td>
+                <td>{{PI|number:'3.3-5'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{a}}</td>
+                <td>number:3.3-5</td>
+                <td>{{a|percent:'2.2-3'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{dolar}}</td>
+                <td>currency</td>
+                <td>{{dolar|currency:'EUR'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{dolar}}</td>
+                <td>currency</td>
+                <td>{{dolar|currency:'EUR':true:'4.0-0'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{dolar}}</td>
+                <td>number:'.2-2'</td>
+                <td>{{dolar|number:'.2-2'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{heroe}}</td>
+                <td>json</td>
+                <td>{{heroe|json}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{valorPromesa}}</td>
+                <td>async</td>
+                <td>{{valorPromesa|async}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{fecha}}</td>
+                <td>fecha</td>
+                <td>{{fecha|date}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{fecha}}</td>
+                <td>date: medium</td>
+                <td>{{fecha|date:'medium'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{fecha}}</td>
+                <td>date: medium</td>
+                <td>{{fecha|date:'MMMM - dd'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{nombre2}}</td>
+                <td>capitalizado</td>
+                <td>{{nombre2|capitalizado:1:2:3:4}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{nombre}}</td>
+                <td>capitalizado
+                    <button (click)="password=!password" type="button" class="btn btn-outline-primary">ActivarDesactivar</button>
+                </td>
+                <td>{{nombre|pass:password}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>video</h4>
+    <hr>
+    <iframe width="560" height="315" [src]="video|domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!--  <pre>{{heroe|json}}</pre>-->
+
+
+</div>
